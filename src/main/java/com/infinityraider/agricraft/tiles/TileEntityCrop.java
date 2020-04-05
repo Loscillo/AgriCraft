@@ -185,9 +185,7 @@ public class TileEntityCrop extends TileEntityBase implements IAgriCrop, IDebugg
                 consumer.accept(this.getSeed().toStack());
             }
             if (includeProducts && this.isMature()) {
-                for (int trials = (this.seed.getStat().getGain() + 3) / 3; trials > 0; trials--) {
-                    this.seed.getPlant().getHarvestProducts(consumer, this, this.seed.getStat(), this.getRandom());
-                }
+                this.seed.getPlant().getHarvestProducts(consumer, this, this.seed.getStat(), this.getRandom());
             }
         }
     }

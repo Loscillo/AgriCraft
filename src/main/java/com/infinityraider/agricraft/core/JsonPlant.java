@@ -158,7 +158,7 @@ public class JsonPlant implements IAgriPlant {
     @Override
     public void getHarvestProducts(Consumer<ItemStack> products, IAgriCrop crop, IAgriStat stat, Random rand) {
         this.plant.getProducts().getRandom(rand).stream()
-                .map(p -> p.toStack(FuzzyStack.class, rand))
+                .map(p -> p.toStack(FuzzyStack.class, stat.getGain(), stat.getMaxGain()))
                 .filter(Optional::isPresent)
                 .map(p -> p.get().toStack())
                 .forEach(products);
