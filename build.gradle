@@ -89,6 +89,8 @@ dependencies {
     //deobfCompile ("codechicken:EnderStorage:1.12.2-2.4.4.+:deobf") { transitive = false }
     //deobfCompile "cofh:ThermalExpansion:1.12.2-5.5.0.+:deobf"
     //deobfCompile "cofh:ThermalDynamics:1.12.2-2.5.0.+:deobf"
+
+    deobfCompile "mcp.mobius.waila:Hwyla:1.8.26-B41_1.12.2"
     
     // *Special* Minecraft Mods
     // Have to disable transitive deps on this one since stupid stuff is going on...
